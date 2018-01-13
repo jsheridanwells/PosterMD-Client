@@ -2,4 +2,4 @@
 
 ## When
 
-##Then
+## Then
