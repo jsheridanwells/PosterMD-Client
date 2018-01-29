@@ -24,17 +24,34 @@ app.config(($routeProvider) => {
   })
   .otherwise('/');
 });
-},{"../lib/node_modules/angular":10,"../lib/node_modules/angular-route":8,"./controllers":2,"./creds":3,"./directives":4,"./factories":5,"./services":6}],2:[function(require,module,exports){
+},{"../lib/node_modules/angular":11,"../lib/node_modules/angular-route":9,"./controllers":2,"./creds":4,"./directives":5,"./factories":6,"./services":7}],2:[function(require,module,exports){
+'use strict';
 
-},{}],3:[function(require,module,exports){
-arguments[4][2][0].apply(exports,arguments)
-},{"dup":2}],4:[function(require,module,exports){
-arguments[4][2][0].apply(exports,arguments)
-},{"dup":2}],5:[function(require,module,exports){
-arguments[4][2][0].apply(exports,arguments)
-},{"dup":2}],6:[function(require,module,exports){
-arguments[4][2][0].apply(exports,arguments)
-},{"dup":2}],7:[function(require,module,exports){
+let app = require('../../lib/node_modules/angular').module('PosterMD');
+app.controller('userCtrl', require('./userCtrl.js'));
+},{"../../lib/node_modules/angular":11,"./userCtrl.js":3}],3:[function(require,module,exports){
+'use strict';
+
+module.exports = function(
+  $scope
+) {
+  $scope.user = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    passwordConfirmation: ''
+  };
+};
+},{}],4:[function(require,module,exports){
+
+},{}],5:[function(require,module,exports){
+arguments[4][4][0].apply(exports,arguments)
+},{"dup":4}],6:[function(require,module,exports){
+arguments[4][4][0].apply(exports,arguments)
+},{"dup":4}],7:[function(require,module,exports){
+arguments[4][4][0].apply(exports,arguments)
+},{"dup":4}],8:[function(require,module,exports){
 /**
  * @license AngularJS v1.6.8
  * (c) 2010-2017 Google, Inc. http://angularjs.org
@@ -1260,11 +1277,11 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 
 })(window, window.angular);
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 require('./angular-route');
 module.exports = 'ngRoute';
 
-},{"./angular-route":7}],9:[function(require,module,exports){
+},{"./angular-route":8}],10:[function(require,module,exports){
 /**
  * @license AngularJS v1.6.8
  * (c) 2010-2017 Google, Inc. http://angularjs.org
@@ -35520,8 +35537,8 @@ $provide.value("$locale", {
 })(window);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":9}]},{},[1,2,3,4,5,6]);
+},{"./angular":10}]},{},[1,2,3,4,5,6,7]);
