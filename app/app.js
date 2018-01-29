@@ -16,10 +16,15 @@ app.config(($routeProvider) => {
     templateUrl: 'views/splash.html'
   })
   .when('/signup', {
-    templateUrl: 'views/signup.html'
+    templateUrl: 'views/signup.html',
+    controller: 'userCtrl'
   })
   .when('/login', {
-    templateUrl: 'views/login.html'
+    templateUrl: 'views/login.html',
+    controller: 'userCtrl'
+  })
+  .when('/blogs', {
+    templateUrl: 'views/blogs.html'
   })
   .otherwise('/');
 });
